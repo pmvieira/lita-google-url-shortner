@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-google-url-shortner"
   spec.version       = "0.1.0"
-  spec.authors       = ["neilang"]
-  spec.email         = ["neilang@gmail.com"]
-  spec.description   = "A lita handler to help you pick where to go for lunch"
-  spec.summary       = "A lita handler to help you pick where to go for lunch"
-  spec.homepage      = "https://github.com/neilang/lita-lunch"
+  spec.authors       = ["pmvieira"]
+  spec.email         = ["pedrovieira@quillcontent.com"]
+  spec.description   = "A lita handler to generate a google-shorten url"
+  spec.summary       = "AA lita handler to generate a google-shorten url"
+  spec.homepage      = "https://github.com/pmvieira/lita-google-url-shortner"
   spec.license       = "MIT"
   spec.metadata      = { "lita_plugin_type" => "handler" }
 

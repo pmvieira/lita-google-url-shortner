@@ -9,13 +9,13 @@ module Lita
         headers = {"Content-Type"=>"application/json"}
         url = response.matches[0][0]
         url = { :longUrl => "#{url}"}.to_json
-        short_url = generate_url(url) unless short_url
+        short_url = generate_url(url, headers) unless short_url
         response.reply_privately "Here's your short url: #{short_url}"
       end
 
       private
 
-      def generate_url(url)
+      def generate_url(url, headers)
         
         resp = HTTParty.post("https://www.googleapis.com/urlshortener/v1/url?key=#{G_API_KEY}", :body => url, :headers => headers ).to_json
         resp = JSON.parse(resp)

@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-google-url-shortner"
-  spec.version       = "0.1.2"
+  spec.version       = "0.1.3"
   spec.authors       = ["pmvieira"]
   spec.email         = ["pedrovieira@quillcontent.com"]
   spec.description   = "A lita handler to generate a google-shorten url"
@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
   spec.metadata      = { "lita_plugin_type" => "handler" }
 
-  spec.files         = `git ls-files`.split($/)
   spec.require_paths = ["lib"]
+  spec.files        = Dir['README.md', "Rakefile", 'lib/**/*']
 
   spec.add_runtime_dependency "lita", ">= 4.4"
 

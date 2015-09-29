@@ -7,7 +7,6 @@ module Lita
 
       def show_url(response)
         headers = {"Content-Type"=>"application/json"}
-        raise headers.inspect
         url = response.matches[0][0]
         url = { :longUrl => "#{url}"}.to_json
         short_url = generate_url(url) unless short_url

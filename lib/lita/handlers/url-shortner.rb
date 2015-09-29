@@ -19,7 +19,6 @@ module Lita
         
         resp = HTTParty.post("https://www.googleapis.com/urlshortener/v1/url?key=#{G_API_KEY}", :body => url, :headers => headers ).to_json
         resp = JSON.parse(resp)
-        raise resp.inspect
         short_url = resp["id"]
         short_url
       end

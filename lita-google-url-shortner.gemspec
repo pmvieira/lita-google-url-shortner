@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-google-url-shortner"
-  spec.version       = "0.1.0.1"
+  spec.version       = "0.1.2"
   spec.authors       = ["pmvieira"]
   spec.email         = ["pedrovieira@quillcontent.com"]
   spec.description   = "A lita handler to generate a google-shorten url"

@@ -1,7 +1,7 @@
 module Lita
   module Handlers
     class UrlShortner < Handler
-      route(/^shorten\(.+)/i /, :lookup, command: true, help: {"shorten URL => returns a shorten url"})
+      route(/^shorten\(.+\)/i, :lookup, command: true, help: {"shorten URL => returns a shorten url"})
 
       G_API_KEY = ENV["G_API_KEY"]  
 

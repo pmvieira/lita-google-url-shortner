@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.files        = Dir['README.md', "Rakefile", 'lib/**/*']
 
   spec.add_runtime_dependency "lita", ">= 4.4"
+  spec.add_runtime_dependency "httparty", ">= 0.13"
 
   spec.add_development_dependency "bundler", "~> 1.3"
 end

@@ -3,8 +3,11 @@ module Lita
     class UrlShortner < Handler
       route(/^shorten\(.+)/i /, :lookup, command: true, help: {
         "shorten URL => returns a shorten url"
+
       })
 
+      G_API_KEY = ENV["G_API_KEY"]  
+      
       def show_url(response)
         headers = {"Content-Type"=>"application/json"}
         url = response.matches[0][0]
@@ -16,7 +19,7 @@ module Lita
       private
 
       def generate_url(url)
-        G_API_KEY = ENV["G_API_KEY"]
+        
         resp = HTTParty.post("https://www.googleapis.com/urlshortener/v1/url?key=#{G_API_KEY}", :body => url, :headers => headers ).to_json
         resp = JSON.parse(resp)
         short_url = resp["id"]
